@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
+    "baseUrl": "./", // paths中指定文件夹的相对路径
+    "paths": {
+      "@": ["./src"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "types/**/*.d.ts",
+    "src/**/*.vue",
+    "components.d.ts", // 自动注册的组件
+    "auto-imports.d.ts" // 自动导入的api
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
